@@ -1,1 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<Proizvodi>
+  <Proizvod>
+    <Kategorija>Laptop</Kategorija>
+    <Cena valuta="rsd">15000</Cena>
+    <TekstOglasa>Opis oglasa </TekstOglasa>
+    <Oznake>
+      <Oznaka>akcija</Oznaka>
+    </Oznake>
+    <Akcije>
+      <Akcija cena="12000" datumIsteka="2021-05-1"/>
+    </Akcije>
+  </Proizvod>
+  <Proizvod>
+    <Kategorija>Telefon</Kategorija>
+    <Cena valuta="rsd">119000</Cena>
+    <TekstOglasa>Opis oglasa </TekstOglasa>
+    <Oznake>
+      <Oznaka>Samsung</Oznaka>
+      <Oznaka>Amoled</Oznaka>
+    </Oznake>
+    <Akcije>
+      <Akcija cena="88000" datumIsteka="2021-05-1"/>
+    </Akcije>
+  </Proizvod>
+  <Proizvod>
+    <Kategorija>Ruter</Kategorija>
+    <Cena valuta="rsd">6000</Cena>
+    <TekstOglasa>Opis oglasa </TekstOglasa>
+    <Oznake>
+      <Oznaka>TP-Link</Oznaka>
+      <Oznaka>5GHz</Oznaka>
+    </Oznake>
+    <Akcije>
+      <Akcija cena="" datumIsteka=""/>
+    </Akcije>
+  </Proizvod>
+</Proizvodi>
+
