@@ -1,72 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema targetNamespace="http://tempuri.org/XMLSchema.xsd"
-    elementFormDefault="qualified"
-    xmlns="http://tempuri.org/XMLSchema.xsd"
-    xmlns:mstns="http://tempuri.org/XMLSchema.xsd"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
->
-
-  <xs:element name="Proizvodi">
+﻿<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TekstOglasa">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="10" />
+        <xs:maxLength value="180" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="Cena" type="xs:nonNegativeInteger" />
+  <xs:element name="Oznake">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="Proizvod">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Kategorija" type="xs:string">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:enumeration value="Laptop"/>
-                    <xs:enumeration value="Monitor"/>
-                    <xs:enumeration value="Telefon"/>
-                    <xs:enumeration value="Ruter"/>
-                    <xs:enumeration value="Racunar"/>
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Cena" type="xs:double">
-                <xs:simpleType>
-                  <xs:restriction base="xs:double">
-                    <xs:minInclusive value="0"/>
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="TekstOglasa" type="xs:string">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:minLength value="10" />
-                    <xs:maxLength value="180" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Oznake">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="Oznaka" maxOccurs="5"> 
-                    </xs:element>
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
-              <xs:element name="Akcije">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="Akcija">
-                      <xs:complexType>
-                        <xs:simpleContent>
-                          <xs:extension>
-                            <xs:attribute name="cena" type="xs:double"/>  
-                            <xs:attribute name ="datumIsteka" type="xs:date"/>
-                          </xs:extension>
-                        </xs:simpleContent>
-                      </xs:complexType>
-                    </xs:element>
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
+        <xs:element name="Oznaka" type="xs:string" maxOccurs="5" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  
 </xs:schema>
