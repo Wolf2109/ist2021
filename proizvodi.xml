@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Proizvodi>
   <Proizvod>
-    <Kategorija>Laptop</Kategorija>
+    <Kategorija kategorija="Laptop">Laptop</Kategorija>
     <Cena valuta="rsd">15000</Cena>
     <TekstOglasa>Opis oglasa </TekstOglasa>
     <Oznake>
@@ -12,7 +12,7 @@
     </Akcije>
   </Proizvod>
   <Proizvod>
-    <Kategorija>Telefon</Kategorija>
+    <Kategorija kategorija="Telefon">Telefon</Kategorija>
     <Cena valuta="rsd">119000</Cena>
     <TekstOglasa>Opis oglasa </TekstOglasa>
     <Oznake>
@@ -24,7 +24,7 @@
     </Akcije>
   </Proizvod>
   <Proizvod>
-    <Kategorija>Ruter</Kategorija>
+    <Kategorija kategorija="Ruter">Ruter</Kategorija>
     <Cena valuta="rsd">6000</Cena>
     <TekstOglasa>Opis oglasa </TekstOglasa>
     <Oznake>
