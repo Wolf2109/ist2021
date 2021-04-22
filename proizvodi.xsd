@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TekstOglasa">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="10" />
+        <xs:maxLength value="180" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="Cena" type="xs:nonNegativeInteger" />
+  <xs:element name="Oznake">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Oznaka" type="xs:string" maxOccurs="5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
