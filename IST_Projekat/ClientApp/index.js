@@ -46,12 +46,16 @@ app.get("/detaljnije/:id",(req,res)=>{
     .then(response=>{
         let prikaz="";
             prikaz+=`
+            <td>Oznake</td>
+            <td>Opis</td>
+            </tr>
             <tr>
             <td>${response.data.id}</td>
             <td>${response.data.naziv}</td>
             <td>${response.data.cena} RSD</td>
+            <td>${response.data.oznake}</td>
             <td>${response.data.opis}</td>
-    
+            <td><a href="/izmeni/${response.data.id}" id="izmeni">Izmeni</a></td>
             <td><a href="/obrisi/${response.data.id}" id="obrisi">Obrisi</a></td>
         </tr>`;
         res.send(procitajPogledZaNaziv("sviproizvodi").replace("#{data}",prikaz));
@@ -76,6 +80,7 @@ app.post("/snimiProizvod",(req,res)=>{
         naziv:req.body.naziv,
         kategorija:req.body.kategorija,
         cena:req.body.cena,
+        oznake:req.body.oznake,
         opis:req.body.opis
     })
     res.redirect("/sviProizvodi");
@@ -119,7 +124,10 @@ app.get("/izmeni/:id",(req,res)=>{
         Kategorija: <input type="text" name="kategorija" value="${response.data.kategorija}">
         <br>
         <br>
-        Cena <input type="text" name="cena" value="${response.data.cena}">
+        Cena <input type="number" name="cena" min="0" value="${response.data.cena}">
+        <br>
+        <br>
+        Oznake: <input type="text" name="oznake" value="${response.data.oznake}">
         <br>
         <br>
         Opis: 
@@ -139,7 +147,7 @@ app.get("/izmeni/:id",(req,res)=>{
 });
 
 app.post("/snimiIzmenjenProizvod",(req,res)=>{
-    axios.post(`http://localhost:3000/izmeniProizvod/${req.body["id"]}/${req.body["naziv"]}/${req.body["kategorija"]}/${req.body["cena"]}/${req.body["opis"]}`)
+    axios.post(`http://localhost:3000/izmeniProizvod/${req.body["id"]}/${req.body["naziv"]}/${req.body["kategorija"]}/${req.body["cena"]}/${req.body["oznake"]}/${req.body["opis"]}`)
     res.redirect("/sviProizvodi");
 })
 

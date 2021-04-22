@@ -29,7 +29,7 @@ exports.dodajProizvod = (noviProizvod) => {
 exports.getProizvod = (id) => {
     return this.sviProizvodi().find(x => x.id == id);
 }
-exports.izmeniProizvod = (id, naziv, kategorija, cena, opis) => {
+exports.izmeniProizvod = (id, naziv, kategorija, cena, oznake, opis) => {
     let proizvodi=this.sviProizvodi();
     proizvodi.forEach(element => {
         if(element.id == id)
@@ -37,6 +37,7 @@ exports.izmeniProizvod = (id, naziv, kategorija, cena, opis) => {
                 element.naziv = naziv;
                 element.kategorija = kategorija;
                 element.cena = cena;
+                element.oznake = oznake;
                 element.opis = opis;
             };
     });

@@ -19,8 +19,8 @@ app.post('/dodajProizvod',(request, response)=>{
     response.end("OK");
 })
 
-app.post('/izmeniProizvod/:id/:naziv/:kategorija/:cena/:opis',(request, response)=>{
-    proizvodiServis.izmeniProizvod(request.params["id"],request.params["naziv"],request.params["kategorija"],request.params["cena"],request.params["opis"]);
+app.post('/izmeniProizvod/:id/:naziv/:kategorija/:cena/:oznake/:opis',(request, response)=>{
+    proizvodiServis.izmeniProizvod(request.params["id"],request.params["naziv"],request.params["kategorija"],request.params["cena"],request.params["oznake"],request.params["opis"]);
     response.end("OK");
 });
 
