@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+
+}
+a{
+ text-decoration: none;   
+}
+
+#obrisi{
+    color: red;
+}
+
+#detaljnije{
+    color: green;
+}
+#izmeni{
+    color: blue;
+}
+p{
+            padding: 0px;
+            margin: 0px;
+            font-size: 8pt;
+        }
+</style>
+</head>
+<body>
+    <nav>
+        <a href="/sviProizvodi">Pogledaj sve proizvode</a>
+        <a href="/dodajProizvod">Dodaj proizvod</a>
+    </nav>
+    <div>
+        <form action="/pretraziProizvodPoKategoriji" method="POST">
+            <label for="">Naziv kategorije</label> <input type="text" name="kategorija"> <button type="submit">Filtriraj</button>
+        </form>
+    </div>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Naslov</td>
+                <td>Cena</td>
+            </tr>
+        </thead>
+        <tbody>
+            #{data}
+        </tbody>
+    </table>
+</body>
+</html>
